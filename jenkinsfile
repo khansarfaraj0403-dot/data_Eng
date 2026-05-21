@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage("checkout code"){
+            steps{
+                checkout scm
+            }
+        }
+        stage("show python version"){
+            steps{
+                bat python --version
+            }
+        }
+        stage("run extractdata.py"){
+            steps{
+                bat python extractdata.py
+            }
+        }
+    }
+}

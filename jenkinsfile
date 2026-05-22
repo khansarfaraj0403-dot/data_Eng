@@ -11,12 +11,12 @@ pipeline{
         }
         stage("show python version"){
             steps{
-                bat "python --version"
+                bat "${env.PYTHON} --version"
             }
         }
         stage("run extractdata.py"){
             steps{
-                bat "python extractdata.py"
+                bat "${env.PYTHON}extractdata.py"
             }
         }
     }

@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    enviroment {
+        PYTHON=C:\\Users\\sarfa\\AppData\\Local\\Programs\\Python\\Python314\\python.exe
+    }
     stages{
         stage("checkout code"){
             steps{
